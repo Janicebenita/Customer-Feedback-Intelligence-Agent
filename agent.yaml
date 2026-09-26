@@ -1,0 +1,10 @@
+spec_version: "0.1.0"
+name: customer-feedback-intelligence-agent
+version: 1.0.0
+description: Classifies customer feedback by sentiment, topic, urgency, and product area and summarizes recurring evidence for action.
+author: Janice Benita F
+runtime:
+  max_turns: 20
+  timeout: 120
+tags: [marketing, customer-feedback, sentiment, voice-of-customer]
+
