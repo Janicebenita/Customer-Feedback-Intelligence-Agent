@@ -20,3 +20,9 @@ A limitation is that sentiment and topic classification can misread sarcasm, mul
 
 The agent marks ambiguous classifications and low-volume themes as uncertain. Human review is required before contacting customers, publishing claims, changing policy, making product commitments, or escalating sensitive complaints.
 
+## Implementation in This Repository
+
+`app.py` loads feedback records, performs the repository's sentiment and topic analysis, and renders the reviewer-facing results. `sample_data.csv` provides reproducible input, while `requirements.txt` declares the runtime dependencies needed to execute the application.
+
+The implementation does not contact customers or change product systems. Its classifications are visible intermediate evidence, and ambiguous or low-volume themes remain flagged for human interpretation.
+
