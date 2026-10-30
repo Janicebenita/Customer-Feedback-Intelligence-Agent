@@ -22,7 +22,7 @@ The agent marks ambiguous classifications and low-volume themes as uncertain. Hu
 
 ## Implementation in This Repository
 
-`app.py` loads feedback records, performs the repository's sentiment and topic analysis, and renders the reviewer-facing results. `sample_data.csv` provides reproducible input, while `requirements.txt` declares the runtime dependencies needed to execute the application.
+The executable implementation is in `app.py`. Its `classify(text)` function tokenizes each feedback message, compares the tokens with the declared `POSITIVE`, `NEGATIVE`, `URGENT`, and `TOPICS` rule sets, and returns sentiment, the first matched topic, urgency, and the exact matched terms as evidence.
 
-The implementation does not contact customers or change product systems. Its classifications are visible intermediate evidence, and ambiguous or low-volume themes remain flagged for human interpretation.
+The Streamlit path loads an uploaded CSV or `sample_data.csv`, verifies the `feedback_id` and `feedback` columns, applies `classify` to every row, displays topic and urgent-review tables, and exports `classified_feedback.csv`. It does not contact customers or change product systems; the rule terms remain visible for human interpretation.
 
